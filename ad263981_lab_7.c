@@ -5,6 +5,7 @@ void bubbleSort(int a[], int len, int* count)
 {
     for (int i = 0; i < len; i++)
     {
+        int swapcount=0;
         for (int j = 0; j < (len - 1); j++)
         {
             if (a[j] > a[j + 1])
@@ -13,8 +14,10 @@ void bubbleSort(int a[], int len, int* count)
                 a[j] = a[j + 1];
                 a[j + 1] = temp;
                 (*count)++;
+                swapcount++;
             }
         }
+        printf("%d\n", swapcount);
     }
 }
 
